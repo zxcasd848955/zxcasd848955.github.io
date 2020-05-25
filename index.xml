@@ -6,7 +6,7 @@
     <description>Recent content on Keep Going</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 13:22:00 +0800</lastBuildDate>
     
 	<atom:link href="https://zxcasd848955.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,28 +14,64 @@
     <item>
       <title>day 1</title>
       <link>https://zxcasd848955.github.io/life/d1/</link>
-      <pubDate>Tue, 29 Oct 2019 13:49:23 +0600</pubDate>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
       
       <guid>https://zxcasd848955.github.io/life/d1/</guid>
       <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
     </item>
     
     <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>https://zxcasd848955.github.io/blog/post-1/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <title>day 2</title>
+      <link>https://zxcasd848955.github.io/life/d2/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
       
-      <guid>https://zxcasd848955.github.io/blog/post-1/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>https://zxcasd848955.github.io/life/d2/</guid>
+      <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
     </item>
     
     <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>https://zxcasd848955.github.io/blog/post-4/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <title>day 3</title>
+      <link>https://zxcasd848955.github.io/life/d3/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
       
-      <guid>https://zxcasd848955.github.io/blog/post-4/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>https://zxcasd848955.github.io/life/d3/</guid>
+      <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
+    </item>
+    
+    <item>
+      <title>day 4</title>
+      <link>https://zxcasd848955.github.io/life/d4/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/life/d4/</guid>
+      <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
+    </item>
+    
+    <item>
+      <title>day 5</title>
+      <link>https://zxcasd848955.github.io/life/d5/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/life/d5/</guid>
+      <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
+    </item>
+    
+    <item>
+      <title>LDA以及LDA主题模型</title>
+      <link>https://zxcasd848955.github.io/blog/post-2/</link>
+      <pubDate>Mon, 25 May 2020 13:14:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-2/</guid>
+      <description>用于记录阅读《LDA杂谈》的一些知识。</description>
+    </item>
+    
+    <item>
+      <title>如何利用这个网站</title>
+      <link>https://zxcasd848955.github.io/blog/post-1/</link>
+      <pubDate>Mon, 25 May 2020 13:11:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-1/</guid>
+      <description>又花费了一些时间在git pages 搭建了一个过热网站</description>
     </item>
     
   </channel>
