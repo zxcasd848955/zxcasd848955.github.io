@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://zxcasd848955.github.io"
+baseURL = "https://zxcasd848955.github.io/"
 languageCode = "zh-cn"
 title = "Keep Going"
 theme = "liva"
