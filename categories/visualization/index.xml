@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Keep Going</title>
-    <link>https://zxcasd848955.github.io/blog/</link>
-    <description>Recent content in blog on Keep Going</description>
+    <title>Visualization on Keep Going</title>
+    <link>https://zxcasd848955.github.io/categories/visualization/</link>
+    <description>Recent content in Visualization on Keep Going</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 13:14:00 +0800</lastBuildDate>
     
-	<atom:link href="https://zxcasd848955.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zxcasd848955.github.io/categories/visualization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://zxcasd848955.github.io/blog/post-2/</guid>
       <description>数据可视化 简介  图形语法包含了数学风格的语法与美学风格的语法。 从图到图形接住了美学或者视觉上的一些属性，如大小和颜色。  定义或者描述  数据：数据可视化基于的数据源。 转化：对数据的一些转化操作，如聚合、排序、筛选等。 标度：缩放操作，如log。 坐标：坐标系统，如极坐标系、笛卡尔坐标系。 元素：图形的视觉元素与属性，如颜色、大小、形状。 指引/提示：提示信息，如刻度、图例。  流程  分析数据，对原始数据进行标准化，结构化。查看视角,主题提炼   元数据，维度，元数据间关系，数据规模</description>
-    </item>
-    
-    <item>
-      <title>产品，设计和技术</title>
-      <link>https://zxcasd848955.github.io/blog/post-1/</link>
-      <pubDate>Mon, 25 May 2020 13:11:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-1/</guid>
-      <description>不管你信不信，这个世界无论多么喧哗，一定有人还在专注地、默默地做着自己喜爱的东西。做一件细致入微的事情，安静生活、寂静思考。</description>
     </item>
     
   </channel>
