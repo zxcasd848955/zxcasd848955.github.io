@@ -20,14 +20,5 @@
       <description>用于记录阅读《LDA杂谈》的一些知识。</description>
     </item>
     
-    <item>
-      <title>如何利用这个网站</title>
-      <link>https://zxcasd848955.github.io/blog/post-1/</link>
-      <pubDate>Mon, 25 May 2020 13:11:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-1/</guid>
-      <description>又花费了一些时间在git pages 搭建了一个过热网站</description>
-    </item>
-    
   </channel>
 </rss>
