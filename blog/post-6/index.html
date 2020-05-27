@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Keep Going</title>
+
+  <!-- mobile responsive meta -->
+  <meta charset='utf-8'/>
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+  <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"/>
+  <meta HTTP-EQUIV="Expires" CONTENT="0"/>
+  <meta http-equiv="x-dns-prefetch-control" content="on"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="Cz">
+  <meta name="generator" content="Hugo 0.71.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/scss/style.min.css" media="screen">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://zxcasd848955.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://zxcasd848955.github.io/images/favicon.png " type="image/x-icon">
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://zxcasd848955.github.io/">
+        
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/zxcasd848955"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="cz158290@gmail.com"><i class="ti-google"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://zxcasd848955.github.io/" style="color:#1D2124">
+        
+            Keep Going</a>
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/about">关于</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/blog">笔记</a>
+          </li>
+          
+          
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/life">生活</a>
+          </li>
+          
+          
+
+        </ul>
+
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/programming"
+          class="text-primary">Programming</a>
+        
+        <h2>apache deploy many sub-domain sites</h2>
+        <div class="mb-3 post-meta">
+          <span>By Cz</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>25 October 2019</span>
+          
+        </div>
+        
+        <img src="https://zxcasd848955.github.io/images/post/6.jpg" class="img-fluid w-100 mb-4" alt="apache deploy many sub-domain sites">
+        
+        <div class="content mb-5">
+          <p><strong>采用的是apache多子域名部署(当然还有IP和端口)</strong>
+<font face="微软雅黑" size=2 color=#20B2AA >前提是先在阿里云域名解析添加多个子域名 记录类型为A记录 IP地址为你的阿里云主机IP地址</font></p>
+<p><strong>apache虚拟主机配置</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">//Laravel
+&lt;<span style="color:#f92672">VirtualHost</span> <span style="font-style:italic">*:80&gt;
+</span><span style="font-style:italic">    ServerName   www.cz123.xyz
+</span><span style="font-style:italic">    DocumentRoot /var/www/html/blog/public
+</span><span style="font-style:italic">    DirectoryIndex index.html index.php
+</span><span style="font-style:italic">    &lt;Directory &#34;/var/www/html/blog/public&#34;&gt;
+</span><span style="font-style:italic">        Options FollowSymLinks
+</span><span style="font-style:italic">        AllowOverride All
+</span><span style="font-style:italic">        Order allow,deny
+</span><span style="font-style:italic">        allow from all
+</span><span style="font-style:italic">    &lt;/Directory&gt;
+</span><span style="font-style:italic">&lt;/VirtualHost&gt;
+</span><span style="font-style:italic">//Laravel
+</span><span style="font-style:italic">&lt;VirtualHost *</span>:<span style="color:#f92672">80</span>&gt;
+    ServerName  aa.cz123.xyz
+    DocumentRoot /var/www/html/college/public
+    DirectoryIndex index.html index.php
+   ErrorLog &#34;/var/www/wwwlogs/webrtc.college.cz123.xyz_error_apache.log&#34;
+    &lt;<span style="color:#f92672">Directory</span> <span style="color:#960050;background-color:#1e0010">&#34;/</span><span style="color:#a6e22e">var</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">www</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">html</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">college</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">public</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+        Options FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    &lt;/<span style="color:#f92672">Directory</span>&gt;
+&lt;/<span style="color:#f92672">VirtualHost</span>&gt;
+//symfony
+&lt;<span style="color:#f92672">VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">:80</span>&gt;
+    ServerName  bb.cz123.xyz
+    DocumentRoot /var/www/html/symfony/web
+   # DirectoryIndex app.php index.html
+   ErrorLog &#34;/var/www/wwwlogs/webrtc.symfony.cz123.xyz_error_apache.log&#34;
+    &lt;<span style="color:#f92672">Directory</span> <span style="color:#960050;background-color:#1e0010">&#34;/</span><span style="color:#a6e22e">var</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">www</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">html</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">symfony</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">web</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;
+        Options FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    &lt;/<span style="color:#f92672">Directory</span>&gt;
+     &lt;<span style="color:#f92672">IfModule</span> <span style="color:#a6e22e">mod_rewrite</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">c</span>&gt;
+            RewriteEngine On
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*)$/app.php [QSA,L]
+        &lt;/<span style="color:#f92672">IfModule</span>&gt;
+&lt;/<span style="color:#f92672">VirtualHost</span>&gt;
+//node eggjs
+&lt;<span style="color:#f92672">VirtualHost</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">:80</span>&gt;
+    ServerName  cc.cz123.xyz
+   #DocumentRoot /var/www/html/node
+   # DirectoryIndex index.html index.php
+    ErrorLog &#34;/var/www/wwwlogs/webrtc.node.cz123.xyz_error_apache.log&#34;
+    CustomLog &#34;/var/www/wwwlogs/webrtc.node.cz123.xyz__apache.log&#34; common
+
+    ProxyRequests off
+   # ProxyPreservehost On
+      &lt;<span style="color:#f92672">Proxy</span> <span style="color:#960050;background-color:#1e0010">*</span>&gt;
+        Order deny,allow
+        Allow from all
+      &lt;/<span style="color:#f92672">Proxy</span>&gt;
+        //开启apache代理 将所有请求(请求路径为 / )转发到 http://localhost:7001/
+        //同时还要加载apache的代理模块
+        //在httpd.conf中
+        //LoadModule proxy_module modules/mod_proxy.so
+        //LoadModule proxy_connect_module modules/mod_proxy_connect.so
+        //LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+        //LoadModule proxy_http_module modules/mod_proxy_http.so
+
+        ProxyPass /  http://localhost:7001/
+        ProxyPassReverse /  http://localhost:7001/
+
+&lt;/<span style="color:#f92672">VirtualHost</span>&gt;
+</code></pre></div><p><strong>然后修改hosts文件/etc/hosts</strong>
+<span color=#00BFFF> 添加一行 127.0.0.1: cz123.xyz <a href="http://www.cz123.xyz">www.cz123.xyz</a> aa.cz123.xyz  bb.cz123.xyz cc.cz123.xyz</span></p>
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://zxcasd848955.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/mark.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://zxcasd848955.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>

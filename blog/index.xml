@@ -47,5 +47,105 @@
       <description>不管你信不信，这个世界无论多么喧哗，一定有人还在专注地、默默地做着自己喜爱的东西。做一件细致入微的事情，安静生活、寂静思考。</description>
     </item>
     
+    <item>
+      <title>About SQL</title>
+      <link>https://zxcasd848955.github.io/blog/post-5/</link>
+      <pubDate>Wed, 20 Nov 2019 23:42:27 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-5/</guid>
+      <description>SQL数据库结构  基本表是实际存储于存储文件中的表
+视图是由基本表产生的映像信息，数据动态产生于维护。视图的更改最终体现在基本表的更改上。
+ 定义视图  create view view_name[(列名[, 列名] &amp;hellip;)]</description>
+    </item>
+    
+    <item>
+      <title>SQl 语句及其优化</title>
+      <link>https://zxcasd848955.github.io/blog/post-8/</link>
+      <pubDate>Mon, 04 Nov 2019 23:29:28 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-8/</guid>
+      <description>&lt;h3 id=&#34;删除delete&#34;&gt;删除Delete&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删除有四门课程不及格的同学&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Delete&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; student &lt;span style=&#34;color:#66d9ef&#34;&gt;Where&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;S&lt;span style=&#34;color:#f92672&#34;&gt;#`&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; 
+ 							(&lt;span style=&#34;color:#66d9ef&#34;&gt;Select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;S&lt;span style=&#34;color:#f92672&#34;&gt;#`&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt;  sc &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; 
+                              			Score &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Group&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;S&lt;span style=&#34;color:#f92672&#34;&gt;#`&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Having&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Count&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;更新update&#34;&gt;更新Update&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Update&lt;/span&gt; SC 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; Score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Score&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;001&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; Score &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;some&lt;/span&gt; 
+							(&lt;span style=&#34;color:#66d9ef&#34;&gt;Select&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AVG&lt;/span&gt;(Score) &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; SC &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;001&amp;#39;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将张三同学001号课的成绩置为其班级该门课的平均成绩&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Update&lt;/span&gt; SC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;Set&lt;/span&gt; Score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;Select&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AVG&lt;/span&gt;(SC2.Score)
+             &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; SC SC1, Student S1, SC SC2, Student S2 
+             &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; S1.Sclass &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; S2.Sclass &lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; SC1.S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; S1.S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;
+             		&lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; SC2.S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; S2.S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; S1.Sname &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;张三&amp;#39;&lt;/span&gt;
+             		&lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; SC1.&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;001&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; SC1.&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SC2.&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;)
+ &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;001&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;Select&lt;/span&gt; S&lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; Student
+                           &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; Sname &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;张三&amp;#39;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;复杂sql&#34;&gt;复杂SQL&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>一些链接</title>
+      <link>https://zxcasd848955.github.io/blog/post-9/</link>
+      <pubDate>Fri, 01 Nov 2019 21:06:55 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-9/</guid>
+      <description>&lt;p&gt;&lt;font color=red&gt;以下链接均为转载，不是原创&lt;/font&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>软件安全常见问题</title>
+      <link>https://zxcasd848955.github.io/blog/post-7/</link>
+      <pubDate>Fri, 01 Nov 2019 17:58:29 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-7/</guid>
+      <description>&lt;h2 id=&#34;web应用体系架构&#34;&gt;Web应用体系架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Web Client&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reponse (&lt;code&gt;xml&lt;/code&gt;, &lt;code&gt;javascript&lt;/code&gt;, &lt;code&gt;vbscript&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IIS&lt;/li&gt;
+&lt;li&gt;Apache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中间件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tomcat&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Weblogic&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Webshper&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>apache deploy many sub-domain sites</title>
+      <link>https://zxcasd848955.github.io/blog/post-6/</link>
+      <pubDate>Fri, 25 Oct 2019 15:21:13 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-6/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;采用的是apache多子域名部署(当然还有IP和端口)&lt;/strong&gt;
+&lt;font face=&#34;微软雅黑&#34; size=2 color=#20B2AA &gt;前提是先在阿里云域名解析添加多个子域名 记录类型为A记录 IP地址为你的阿里云主机IP地址&lt;/font&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

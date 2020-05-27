@@ -1,73 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Keep Going</title>
-    <link>https://zxcasd848955.github.io/</link>
-    <description>Recent content on Keep Going</description>
+    <title>SQL on Keep Going</title>
+    <link>https://zxcasd848955.github.io/tags/sql/</link>
+    <description>Recent content in SQL on Keep Going</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 May 2020 03:19:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 23:42:27 +0000</lastBuildDate>
     
-	<atom:link href="https://zxcasd848955.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zxcasd848955.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>演员就要有演员的样子</title>
-      <link>https://zxcasd848955.github.io/life/d2/</link>
-      <pubDate>Wed, 27 May 2020 03:19:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/life/d2/</guid>
-      <description>不急不躁，
-十年蛰伏。
-云上看景，
-未来可期。
-演员朱一龙</description>
-    </item>
-    
-    <item>
-      <title>PS</title>
-      <link>https://zxcasd848955.github.io/blog/post-3/</link>
-      <pubDate>Wed, 27 May 2020 03:04:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-3/</guid>
-      <description>开始学PS了 虽然以前收集了很多资料，但是毛用都没有。:(</description>
-    </item>
-    
-    <item>
-      <title>数据可视化</title>
-      <link>https://zxcasd848955.github.io/blog/post-4/</link>
-      <pubDate>Wed, 27 May 2020 03:04:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-4/</guid>
-      <description>放送美图 太好看了吧 :)</description>
-    </item>
-    
-    <item>
-      <title>day 1</title>
-      <link>https://zxcasd848955.github.io/life/d1/</link>
-      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/life/d1/</guid>
-      <description>模把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
-    </item>
-    
-    <item>
-      <title>数据可视化</title>
-      <link>https://zxcasd848955.github.io/blog/post-2/</link>
-      <pubDate>Mon, 25 May 2020 13:14:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-2/</guid>
-      <description>数据可视化 简介  图形语法包含了数学风格的语法与美学风格的语法。 从图到图形接住了美学或者视觉上的一些属性，如大小和颜色。  定义或者描述  数据：数据可视化基于的数据源。 转化：对数据的一些转化操作，如聚合、排序、筛选等。 标度：缩放操作，如log。 坐标：坐标系统，如极坐标系、笛卡尔坐标系。 元素：图形的视觉元素与属性，如颜色、大小、形状。 指引/提示：提示信息，如刻度、图例。  流程  分析数据，对原始数据进行标准化，结构化。查看视角,主题提炼   元数据，维度，元数据间关系，数据规模</description>
-    </item>
-    
-    <item>
-      <title>产品，设计和技术</title>
-      <link>https://zxcasd848955.github.io/blog/post-1/</link>
-      <pubDate>Mon, 25 May 2020 13:11:00 +0800</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-1/</guid>
-      <description>不管你信不信，这个世界无论多么喧哗，一定有人还在专注地、默默地做着自己喜爱的东西。做一件细致入微的事情，安静生活、寂静思考。</description>
-    </item>
     
     <item>
       <title>About SQL</title>
@@ -110,63 +52,6 @@
                            &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; Sname &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;张三&amp;#39;&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;复杂sql&#34;&gt;复杂SQL&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>一些链接</title>
-      <link>https://zxcasd848955.github.io/blog/post-9/</link>
-      <pubDate>Fri, 01 Nov 2019 21:06:55 +0000</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-9/</guid>
-      <description>&lt;p&gt;&lt;font color=red&gt;以下链接均为转载，不是原创&lt;/font&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>软件安全常见问题</title>
-      <link>https://zxcasd848955.github.io/blog/post-7/</link>
-      <pubDate>Fri, 01 Nov 2019 17:58:29 +0000</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-7/</guid>
-      <description>&lt;h2 id=&#34;web应用体系架构&#34;&gt;Web应用体系架构&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Web Client&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reponse (&lt;code&gt;xml&lt;/code&gt;, &lt;code&gt;javascript&lt;/code&gt;, &lt;code&gt;vbscript&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Web服务器&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IIS&lt;/li&gt;
-&lt;li&gt;Apache&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;中间件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Tomcat&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Weblogic&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Webshper&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>apache deploy many sub-domain sites</title>
-      <link>https://zxcasd848955.github.io/blog/post-6/</link>
-      <pubDate>Fri, 25 Oct 2019 15:21:13 +0000</pubDate>
-      
-      <guid>https://zxcasd848955.github.io/blog/post-6/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;采用的是apache多子域名部署(当然还有IP和端口)&lt;/strong&gt;
-&lt;font face=&#34;微软雅黑&#34; size=2 color=#20B2AA &gt;前提是先在阿里云域名解析添加多个子域名 记录类型为A记录 IP地址为你的阿里云主机IP地址&lt;/font&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

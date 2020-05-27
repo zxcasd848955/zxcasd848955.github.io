@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on Keep Going</title>
+    <link>https://zxcasd848955.github.io/tags/web/</link>
+    <description>Recent content in web on Keep Going</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 25 Oct 2019 15:21:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://zxcasd848955.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>apache deploy many sub-domain sites</title>
+      <link>https://zxcasd848955.github.io/blog/post-6/</link>
+      <pubDate>Fri, 25 Oct 2019 15:21:13 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-6/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;采用的是apache多子域名部署(当然还有IP和端口)&lt;/strong&gt;
+&lt;font face=&#34;微软雅黑&#34; size=2 color=#20B2AA &gt;前提是先在阿里云域名解析添加多个子域名 记录类型为A记录 IP地址为你的阿里云主机IP地址&lt;/font&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

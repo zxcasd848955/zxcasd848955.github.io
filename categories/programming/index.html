@@ -113,18 +113,25 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://zxcasd848955.github.io/images/post/4.jpg" class="card-img-top" alt="About SQL">
+        
         <div class="card-body px-0">
         
-        <a href="https://zxcasd848955.github.io/tags/test/" class="h5 d-block my-3">test</a>
+        <a href="/categories/programming"
+            class="text-primary">Programming</a>
+        
+        <a href="https://zxcasd848955.github.io/blog/post-5/" class="h5 d-block my-3">About SQL</a>
         <div class="mb-3 post-meta">
             <span>By Cz</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
+            <span>20 November 2019</span>
             
         </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/test/" class="btn btn-outline-primary">read more</a>
+        <p>SQL数据库结构  基本表是实际存储于存储文件中的表
+视图是由基本表产生的映像信息，数据动态产生于维护。视图的更改最终体现在基本表的更改上。
+ 定义视图  create view view_name[(列名[, 列名] &hellip;)]</p>
+        <a href="https://zxcasd848955.github.io/blog/post-5/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -132,18 +139,46 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://zxcasd848955.github.io/images/post/3.jpg" class="card-img-top" alt="SQl 语句及其优化">
+        
         <div class="card-body px-0">
         
-        <a href="https://zxcasd848955.github.io/tags/sql/" class="h5 d-block my-3">SQL</a>
+        <a href="/categories/programming"
+            class="text-primary">Programming</a>
+        
+        <a href="https://zxcasd848955.github.io/blog/post-8/" class="h5 d-block my-3">SQl 语句及其优化</a>
         <div class="mb-3 post-meta">
             <span>By Cz</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
+            <span>04 November 2019</span>
             
         </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/sql/" class="btn btn-outline-primary">read more</a>
+        <p><h3 id="删除delete">删除Delete</h3>
+<blockquote>
+<p>删除有四门课程不及格的同学</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Delete</span> <span style="color:#66d9ef">from</span> student <span style="color:#66d9ef">Where</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span> <span style="color:#66d9ef">in</span> 
+ 							(<span style="color:#66d9ef">Select</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span> <span style="color:#66d9ef">from</span>  sc <span style="color:#66d9ef">where</span> 
+                              			Score <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">90</span> <span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">by</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span>  <span style="color:#66d9ef">Having</span> <span style="color:#66d9ef">Count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div></blockquote>
+<h3 id="更新update">更新Update</h3>
+<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Update</span> SC 
+<span style="color:#66d9ef">set</span> Score <span style="color:#f92672">=</span> Score<span style="color:#f92672">*</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span> 
+<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> Score <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">some</span> 
+							(<span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">AVG</span>(Score) <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span>);
+</code></pre></div><p>将张三同学001号课的成绩置为其班级该门课的平均成绩</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Update</span> SC
+<span style="color:#66d9ef">Set</span> Score <span style="color:#f92672">=</span> (<span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">AVG</span>(SC2.Score)
+             <span style="color:#66d9ef">from</span> SC SC1, Student S1, SC SC2, Student S2 
+             <span style="color:#66d9ef">where</span> S1.Sclass <span style="color:#f92672">=</span> S2.Sclass <span style="color:#66d9ef">and</span> SC1.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> S1.S<span style="color:#f92672">#</span>
+             		<span style="color:#66d9ef">and</span> SC2.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> S2.S<span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> S1.Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>
+             		<span style="color:#66d9ef">and</span> SC1.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> SC1.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> SC2.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span>)
+ <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">in</span> (<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> Student
+                           <span style="color:#66d9ef">where</span> Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>);
+</code></pre></div></blockquote>
+<h3 id="复杂sql">复杂SQL</h3></p>
+        <a href="https://zxcasd848955.github.io/blog/post-8/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -151,18 +186,23 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://zxcasd848955.github.io/images/post/1.jpg" class="card-img-top" alt="一些链接">
+        
         <div class="card-body px-0">
         
-        <a href="https://zxcasd848955.github.io/tags/links/" class="h5 d-block my-3">links</a>
+        <a href="/categories/programming"
+            class="text-primary">Programming</a>
+        
+        <a href="https://zxcasd848955.github.io/blog/post-9/" class="h5 d-block my-3">一些链接</a>
         <div class="mb-3 post-meta">
             <span>By Cz</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
+            <span>01 November 2019</span>
             
         </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/links/" class="btn btn-outline-primary">read more</a>
+        <p><p><font color=red>以下链接均为转载，不是原创</font></p></p>
+        <a href="https://zxcasd848955.github.io/blog/post-9/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -170,18 +210,52 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://zxcasd848955.github.io/images/post/2.jpg" class="card-img-top" alt="软件安全常见问题">
+        
         <div class="card-body px-0">
         
-        <a href="https://zxcasd848955.github.io/tags/software-security/" class="h5 d-block my-3">software security</a>
+        <a href="/categories/programming"
+            class="text-primary">Programming</a>
+        
+        <a href="https://zxcasd848955.github.io/blog/post-7/" class="h5 d-block my-3">软件安全常见问题</a>
         <div class="mb-3 post-meta">
             <span>By Cz</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
+            <span>01 November 2019</span>
             
         </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/software-security/" class="btn btn-outline-primary">read more</a>
+        <p><h2 id="web应用体系架构">Web应用体系架构</h2>
+<ul>
+<li>
+<p>Web Client</p>
+<ul>
+<li>Reponse (<code>xml</code>, <code>javascript</code>, <code>vbscript</code>)</li>
+</ul>
+</li>
+<li>
+<p>Web服务器</p>
+<ul>
+<li>IIS</li>
+<li>Apache</li>
+</ul>
+</li>
+<li>
+<p>中间件</p>
+<ul>
+<li>
+<p>Tomcat</p>
+</li>
+<li>
+<p>Weblogic</p>
+</li>
+<li>
+<p>Webshper</p>
+</li>
+</ul>
+</li>
+</ul></p>
+        <a href="https://zxcasd848955.github.io/blog/post-7/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -189,37 +263,24 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://zxcasd848955.github.io/images/post/6.jpg" class="card-img-top" alt="apache deploy many sub-domain sites">
+        
         <div class="card-body px-0">
         
-        <a href="https://zxcasd848955.github.io/tags/apache/" class="h5 d-block my-3">apache</a>
+        <a href="/categories/programming"
+            class="text-primary">Programming</a>
+        
+        <a href="https://zxcasd848955.github.io/blog/post-6/" class="h5 d-block my-3">apache deploy many sub-domain sites</a>
         <div class="mb-3 post-meta">
             <span>By Cz</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
+            <span>25 October 2019</span>
             
         </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/apache/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
-        
-        <a href="https://zxcasd848955.github.io/tags/sub-domain/" class="h5 d-block my-3">sub-domain</a>
-        <div class="mb-3 post-meta">
-            <span>By Cz</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>01 January 0001</span>
-            
-        </div>
-        <p></p>
-        <a href="https://zxcasd848955.github.io/tags/sub-domain/" class="btn btn-outline-primary">read more</a>
+        <p><p><strong>采用的是apache多子域名部署(当然还有IP和端口)</strong>
+<font face="微软雅黑" size=2 color=#20B2AA >前提是先在阿里云域名解析添加多个子域名 记录类型为A记录 IP地址为你的阿里云主机IP地址</font></p></p>
+        <a href="https://zxcasd848955.github.io/blog/post-6/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -284,50 +345,6 @@
       
       <div class="col-12 mt-5">
         
-
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/tags/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/tags/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/tags/page/2/">2</a></li>
-    
-    
-    <li class="page-item">
-    <a href="/tags/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/tags/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
 
 
       </div>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software security on Keep Going</title>
+    <link>https://zxcasd848955.github.io/tags/software-security/</link>
+    <description>Recent content in software security on Keep Going</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 01 Nov 2019 17:58:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://zxcasd848955.github.io/tags/software-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>软件安全常见问题</title>
+      <link>https://zxcasd848955.github.io/blog/post-7/</link>
+      <pubDate>Fri, 01 Nov 2019 17:58:29 +0000</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-7/</guid>
+      <description>&lt;h2 id=&#34;web应用体系架构&#34;&gt;Web应用体系架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Web Client&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reponse (&lt;code&gt;xml&lt;/code&gt;, &lt;code&gt;javascript&lt;/code&gt;, &lt;code&gt;vbscript&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IIS&lt;/li&gt;
+&lt;li&gt;Apache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中间件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tomcat&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Weblogic&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Webshper&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

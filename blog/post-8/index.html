@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Keep Going</title>
+
+  <!-- mobile responsive meta -->
+  <meta charset='utf-8'/>
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+  <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"/>
+  <meta HTTP-EQUIV="Expires" CONTENT="0"/>
+  <meta http-equiv="x-dns-prefetch-control" content="on"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="Cz">
+  <meta name="generator" content="Hugo 0.71.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://zxcasd848955.github.io/scss/style.min.css" media="screen">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://zxcasd848955.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://zxcasd848955.github.io/images/favicon.png " type="image/x-icon">
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://zxcasd848955.github.io/">
+        
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/zxcasd848955"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="cz158290@gmail.com"><i class="ti-google"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://zxcasd848955.github.io/" style="color:#1D2124">
+        
+            Keep Going</a>
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/about">关于</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/blog">笔记</a>
+          </li>
+          
+          
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://zxcasd848955.github.io/life">生活</a>
+          </li>
+          
+          
+
+        </ul>
+
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/programming"
+          class="text-primary">Programming</a>
+        
+        <h2>SQl 语句及其优化</h2>
+        <div class="mb-3 post-meta">
+          <span>By Cz</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>04 November 2019</span>
+          
+        </div>
+        
+        <img src="https://zxcasd848955.github.io/images/post/3.jpg" class="img-fluid w-100 mb-4" alt="SQl 语句及其优化">
+        
+        <div class="content mb-5">
+          <h3 id="删除delete">删除Delete</h3>
+<blockquote>
+<p>删除有四门课程不及格的同学</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Delete</span> <span style="color:#66d9ef">from</span> student <span style="color:#66d9ef">Where</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span> <span style="color:#66d9ef">in</span> 
+ 							(<span style="color:#66d9ef">Select</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span> <span style="color:#66d9ef">from</span>  sc <span style="color:#66d9ef">where</span> 
+                              			Score <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">90</span> <span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">by</span> <span style="color:#f92672">`</span>S<span style="color:#f92672">#`</span>  <span style="color:#66d9ef">Having</span> <span style="color:#66d9ef">Count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div></blockquote>
+<h3 id="更新update">更新Update</h3>
+<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Update</span> SC 
+<span style="color:#66d9ef">set</span> Score <span style="color:#f92672">=</span> Score<span style="color:#f92672">*</span><span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span> 
+<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> Score <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">some</span> 
+							(<span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">AVG</span>(Score) <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span>);
+</code></pre></div><p>将张三同学001号课的成绩置为其班级该门课的平均成绩</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Update</span> SC
+<span style="color:#66d9ef">Set</span> Score <span style="color:#f92672">=</span> (<span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">AVG</span>(SC2.Score)
+             <span style="color:#66d9ef">from</span> SC SC1, Student S1, SC SC2, Student S2 
+             <span style="color:#66d9ef">where</span> S1.Sclass <span style="color:#f92672">=</span> S2.Sclass <span style="color:#66d9ef">and</span> SC1.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> S1.S<span style="color:#f92672">#</span>
+             		<span style="color:#66d9ef">and</span> SC2.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> S2.S<span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> S1.Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>
+             		<span style="color:#66d9ef">and</span> SC1.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> SC1.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> SC2.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span>)
+ <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">in</span> (<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> Student
+                           <span style="color:#66d9ef">where</span> Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>);
+</code></pre></div></blockquote>
+<h3 id="复杂sql">复杂SQL</h3>
+<h4 id="非相关子查询与相关子查询">非相关子查询与相关子查询</h4>
+<blockquote>
+<p>列出没学过李明老师讲授课程的所有同学的姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Sname <span style="color:#66d9ef">from</span> Student
+	<span style="color:#66d9ef">where</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">in</span> (<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC, Course <span style="color:#66d9ef">C</span>, Teacher T
+                     <span style="color:#66d9ef">where</span> T.Tname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;李明&#39;</span> <span style="color:#66d9ef">and</span> SC.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span>
+                    <span style="color:#66d9ef">and</span> T.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.T<span style="color:#f92672">#</span>);
+</code></pre></div></blockquote>
+<h4 id="theta-some-theta-all子查询">theta some/ theta all子查询</h4>
+<blockquote>
+<p><font color=blue>基本语法: 表达式 theta some(子查询) ; 表达式 theta all(子查询)</font></p>
+<p><font color=orange>theta有 &lt;, &gt;, &gt;=, &lt;=, =, &lt;&gt;</font></p>
+<p>找出工资最低的教师姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Tname <span style="color:#66d9ef">from</span> Teacher 
+		<span style="color:#66d9ef">where</span> Salary <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">all</span>(<span style="color:#66d9ef">Select</span> Salary <span style="color:#66d9ef">from</span> Teacher);
+</code></pre></div><p>找出001课程成绩不是最高的所有学生的学号</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC
+		<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> 
+		 		Score <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">some</span>(<span style="color:#66d9ef">Select</span> Score <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span>);
+</code></pre></div><p>找出所有课程都不及格的学生的姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Sname <span style="color:#66d9ef">from</span> Student
+		<span style="color:#66d9ef">where</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">all</span>(<span style="color:#66d9ef">Select</span> Score <span style="color:#66d9ef">from</span> SC
+                      	<span style="color:#66d9ef">where</span> S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Student.S<span style="color:#f92672">#</span>);
+</code></pre></div></blockquote>
+<h4 id="in--not-in子查询">in / not in子查询</h4>
+<blockquote>
+<p><font color=red>表达式 not in(子查询) 不等于 表达式 &lt;&gt; some(子查询)</font></p>
+<p><font color=purple>与not in 等价的是 表达式&lt;&gt; all(子查询)</font></p>
+</blockquote>
+<h4 id="not--exists子查询">(Not ) exists子查询</h4>
+<blockquote>
+<p>检索选修了赵三老师主讲课程的所以同学的姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Distinct</span> Sname <span style="color:#66d9ef">from</span> Student
+	<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">exists</span> (<span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> SC, Course, Teacher
+               <span style="color:#66d9ef">where</span> SC.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Course.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> SC.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Stuent.S<span style="color:#f92672">#</span>
+                <span style="color:#66d9ef">and</span> Course.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> Tname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;赵三&#39;</span>);
+</code></pre></div><p>可以不加not</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Distinct</span> Sname <span style="color:#66d9ef">from</span> Student, SC, Course, Teacher
+            <span style="color:#66d9ef">where</span> SC.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Course.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> SC.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Stuent.S<span style="color:#f92672">#</span>
+                <span style="color:#66d9ef">and</span> Course.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> Tname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;赵三&#39;</span>);
+</code></pre></div><p>not Exists的神操作</p>
+<p>检索学过001号教师主讲的所有课程的所有学生的姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Sname <span style="color:#66d9ef">from</span> Student
+<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span>										<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">不存在</span>
+		<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> Course 							<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">所有</span><span style="color:#ae81ff">001</span><span style="color:#960050;background-color:#1e0010">教师主讲的课程</span>
+		 <span style="color:#66d9ef">where</span> Course.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span>	
+		 <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> SC 								<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">该同学没学过</span>
+		  <span style="color:#66d9ef">where</span> S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Student.S<span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Course.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">}}</span>;
+</code></pre></div><p>列出没学过李明老师讲授任何一门课程的所有同学的姓名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Sname <span style="color:#66d9ef">from</span> Student
+<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span>										<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">不存在</span>
+	<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> Course, SC, Teacher					<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">学过一门课程</span>
+	 <span style="color:#66d9ef">where</span> Tname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;李明&#39;</span> <span style="color:#66d9ef">and</span> Course.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Teacher.T<span style="color:#f92672">#</span>
+	 		<span style="color:#66d9ef">and</span> Course.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> SC.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Student.S<span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">}</span>;
+</code></pre></div><p>列出至少学过98030101号同学学过的所有课程的同学的学号</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Distinct</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC SC1
+<span style="color:#66d9ef">where</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span>										<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">不存在</span>
+		<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> SC SC2							<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">有一门课程</span>
+		 <span style="color:#66d9ef">where</span> SC2.S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;98030101&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span>		<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">该同学没学过</span>
+		 	<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> SC 
+		 	 <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">c</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> SC2.<span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#66d9ef">and</span> S<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> SC1.S<span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">}</span>;
+</code></pre></div></blockquote>
+<h4 id="分组过滤group-by-having-分组过滤条件">分组过滤Group by [Having 分组过滤条件]</h4>
+<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC 
+<span style="color:#66d9ef">where</span> Score <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60</span>
+<span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">by</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">Having</span> <span style="color:#66d9ef">Count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
+</code></pre></div><p>求有两门以上不及格课程同学的学号及其平均成绩</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span>, <span style="color:#66d9ef">Avg</span>(Score) <span style="color:#66d9ef">from</span> sc
+<span style="color:#66d9ef">where</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">in</span>
+		<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC
+		 <span style="color:#66d9ef">where</span> Score <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60</span> 
+		 <span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">by</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">Having</span> <span style="color:#66d9ef">Count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">}</span>
+<span style="color:#66d9ef">Group</span> <span style="color:#66d9ef">by</span> S<span style="color:#f92672">#</span>
+</code></pre></div></blockquote>
+<h4 id="并-交-差-union-intersect-except">并-交-差 Union-Intersect-Except</h4>
+<blockquote>
+<p>子查询1 Union ALL 子查询2  结果出现<code>m + n</code>次</p>
+<p>子查询1 Intersect ALL 子查询2  结果出现<code>min(m, n)</code>次</p>
+<p>子查询1 Except ALL 子查询2 结果出现 <code>max(0, m-n)</code>次</p>
+</blockquote>
+<blockquote>
+<p>求学过002号课的同学或者学过003号课程的同学学号</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;002&#39;</span>
+<span style="color:#66d9ef">Union</span>
+<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;003&#39;</span>;
+</code></pre></div><p>求既学过002号课有学过003号课的同学学号</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;002&#39;</span>
+<span style="color:#66d9ef">Intersect</span> 
+<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;003&#39;</span>;
+<span style="color:#f92672">//</span> <span style="color:#66d9ef">or</span>
+<span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;002&#39;</span> <span style="color:#66d9ef">and</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">in</span>
+		<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">Select</span> S<span style="color:#f92672">#</span> <span style="color:#66d9ef">from</span> SC <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">C</span><span style="color:#f92672">#</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;003&#39;</span><span style="color:#960050;background-color:#1e0010">}</span>;
+</code></pre></div></blockquote>
+<h4 id="内连接-外连接--inner--left--right--fullouter-join-on-连接条件-using-colname">内连接 外连接  [Inner | {Left | Right | Full}[Outer]] Join on 连接条件 Using Colname</h4>
+<blockquote>
+<p>求所有教师的任课情况并按教师号排序(没有任课的教师也需在列)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Teacher.T<span style="color:#f92672">#</span>, Tname, Cname
+<span style="color:#66d9ef">from</span> Teacher <span style="color:#66d9ef">Inner</span> <span style="color:#66d9ef">join</span> Course 
+					<span style="color:#66d9ef">on</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Course.T<span style="color:#f92672">#</span>
+<span style="color:#66d9ef">Order</span> <span style="color:#66d9ef">by</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#66d9ef">ASC</span>;
+</code></pre></div><p>求所有教师的任课情况(没有任课的教师也需在列)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">Select</span> Teacher.T<span style="color:#f92672">#</span>, Tname, Cname
+<span style="color:#66d9ef">from</span> Teacher <span style="color:#66d9ef">Left</span> <span style="color:#66d9ef">Outer</span> <span style="color:#66d9ef">join</span> Course 
+					<span style="color:#66d9ef">on</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#f92672">=</span> Course.T<span style="color:#f92672">#</span>
+<span style="color:#66d9ef">Order</span> <span style="color:#66d9ef">by</span> Teacher.T<span style="color:#f92672">#</span> <span style="color:#66d9ef">ASC</span>;
+</code></pre></div></blockquote>
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://zxcasd848955.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/mark.js"></script>
+
+<script src="https://zxcasd848955.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://zxcasd848955.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>
