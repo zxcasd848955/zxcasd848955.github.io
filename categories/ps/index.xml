@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PS on Keep Going</title>
+    <link>https://zxcasd848955.github.io/categories/ps/</link>
+    <description>Recent content in PS on Keep Going</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 May 2020 03:04:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://zxcasd848955.github.io/categories/ps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数据可视化</title>
+      <link>https://zxcasd848955.github.io/blog/post-3/</link>
+      <pubDate>Wed, 27 May 2020 03:04:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/post-3/</guid>
+      <description>开始学PS了 虽然以前收集了很多资料，但是毛用都没有。:(</description>
+    </item>
+    
+  </channel>
+</rss>
