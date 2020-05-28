@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life on Keep Going</title>
+    <link>https://zxcasd848955.github.io/categories/life/</link>
+    <description>Recent content in life on Keep Going</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 May 2020 13:22:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://zxcasd848955.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>day 1</title>
+      <link>https://zxcasd848955.github.io/blog/d1/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/d1/</guid>
+      <description>莫把信息当作知识， 莫把收藏当学习。 莫把阅读当作思考， 莫把储存当作掌握。</description>
+    </item>
+    
+    <item>
+      <title>语雀太好用了吧</title>
+      <link>https://zxcasd848955.github.io/blog/d3/</link>
+      <pubDate>Mon, 25 May 2020 13:22:00 +0800</pubDate>
+      
+      <guid>https://zxcasd848955.github.io/blog/d3/</guid>
+      <description>语雀太好用了，我决定不在这里写笔记了。 太费事了。 。。。 记录下生活的点滴还是很可以的。。。 毕竟这个主题真的太好看了:)
+放送简洁大气的外观 蚂蚁金服太赞了 i了i了。还推出了桌面端，还是最近几天。太巧了。 当然支持web端。
+知识管理太重要了 The Knowledge needs to be managed; 这款客户端正符合我的心意</description>
+    </item>
+    
+  </channel>
+</rss>
